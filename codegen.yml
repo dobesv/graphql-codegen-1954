@@ -1,0 +1,30 @@
+overwrite: true
+schema:
+  - 'Repro.graphql'
+documents: []
+config: {}
+generates:
+  ./resolverTypes.ts:
+    config:
+      noNamespaces: true
+    documents: []
+    plugins:
+      - typescript-common:
+          scalars:
+            Date: Date
+            JSON: any
+      - typescript-server
+      - typescript-resolvers
+  ./graphQLFilesModules.d.ts:
+    documents:
+      - 'Repro.graphql'
+    plugins:
+      - add: |
+          /* tslint:disable */
+      - typescript-graphql-files-modules
+      - add: |
+          declare module '*.graphql' {
+             const defaultDocument: string;
+             export default defaultDocument;
+          }
+require: []

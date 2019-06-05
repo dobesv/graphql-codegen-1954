@@ -1,0 +1,18 @@
+{
+  "name": "graphql-codegen-1954",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.2.0",
+    "graphql": "^14.3.1",
+    "graphql-codegen-add": "^0.18.2",
+    "graphql-codegen-typescript-graphql-files-modules": "^0.18.2",
+    "graphql-codegen-typescript-resolvers": "^0.18.2",
+    "graphql-codegen-typescript-template": "^0.18.2"
+  },
+  "scripts": {
+    "repro": "gql-gen && tsc resolverTypes.ts"
+  }
+}

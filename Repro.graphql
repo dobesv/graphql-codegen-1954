@@ -1,0 +1,11 @@
+
+type PostComment {
+    _id: ID!
+    likes: Int!
+}
+
+type Post {
+    _id: ID!
+    commentLikes: Int!
+}
+
